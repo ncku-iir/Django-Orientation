@@ -1,2 +1,2 @@
 # Django-Orientation
-Django course project example of orientation
+Django course project example for orientation
