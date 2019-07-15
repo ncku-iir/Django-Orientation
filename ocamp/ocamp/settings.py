@@ -25,7 +25,7 @@ SECRET_KEY = 'o-o!c)(etjztb!dl$f!tmk+(_q*46g%-y0-$rfsn_go18fghr='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -76,8 +76,15 @@ WSGI_APPLICATION = 'ocamp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'your.DB.name',
+        'USER': 'user',
+        'PASSWORD': 'password',
+        'HOST': '127.0.0.1',
+        'PORT': '8080',
+    },
+    'OPTIONS':{
+        "init_command": "SET foreign_key_checks = 0;",
     }
 }
 
